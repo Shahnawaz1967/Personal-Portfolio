@@ -13,20 +13,20 @@
     <div id="header">
         <div class="container">
             <nav>
-                <h1> <a href="#" class="logo">Shahnawaz</a></h1>
+                <h1> <a href="#contact" class="logo">Portfolio</a></h1>
+               
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skill">skills</a></li>
+                    <li><a href="#techskill">Technical Skills</a></li>
                     <li><a href="#contact">contact</a></li>
                     <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>Welcome</p>
-                <h1>Hi,My <span>Name</span> is Md <span>Shahnawaz</span></br> Full Stack <span>Web</span> Developer</h1>
+                <h1>Hi, My <span>Name</span> is Md <span>Shahnawaz</span></br> Full Stack <span>Web</span> Developer</h1>
 
             </div>
         </div>
@@ -89,38 +89,42 @@
     <!-- ---------------PROJECTS----------------->
     <div id="projects">
         <div class="container">
-            <h1 class="sub-title"> My Projects</h1>
-            <div class="projects-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Flashcard Generator</h2>
-                    <p>This application offers features such as card creation, the addition of both text and images,
-                        sharing, downloading, deletion, and even the option to print the generated flashcards. The user
-                        interface of this app is designed to be fully responsive, ensuring a seamless experience across
-                        various devices.</p>
-                    <a href="https://github.com/Shahnawaz1967/flashcardgenerator.git">Learn More</a>
+            <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/flashcard.png"><br>
+                    <div class="layer">
+                        <h3>Flashcard Generator App</h3><br>
+                        <a href="https://github.com/Shahnawaz1967/flashcardgenerator.git"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
                 </div>
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2><span>get-youtube-subscribers</span></h2>
-                    <p>get-youtube-subscribers backend API to get the subscribers data using specific routes end points
-                        made by using Node js, Express js, MongodBand Mongoose</p>
-                    <a href="https://github.com/Shahnawaz1967/get-youtube-subscribers.git">Learn More</a>
+                <div class="work">
+                    <img src="images/youtube.png"><br>
+                    <div class="layer">
+                        <h3>Get Youtube Subscribers</h3><br>
+                        <a href="https://github.com/Shahnawaz1967/get-youtube-subscribers.git"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
                 </div>
-                <div>
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>Todo-App</h2>
-                    <p>TODO app with React enthusiast! I design and code simple, efficient task management interfaces.
-                        Using React, I create dynamic components for seamless user interaction. My focus is on clean UI
-                        and intuitive features, ensuring a delightful user experience. Let's organize tasks and boost
-                        productivity togethe</p>
-                    <a href="#">Learn more</a>
+
+
+                <div class="work">
+                    <img src="images/Portfolio.png"><br>
+                    <div class="layer">
+                        <h3>My Personal Portfolio </h3><br>
+                        </p>
+                        <a href="https://github.com/Shahnawaz1967/Personal-Portfolio.git"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
                 </div>
             </div>
+            <!-- <a href="#" class="btn">See More</a> -->
+
         </div>
+
     </div>
-    <!-- ---------------Skills-------------- -->
-    <div id="skill">
+
+    <!-- ------------------Technical Skill------------------>
+   
+    <div id="techskill">
         <div class="container">
             <h1 class="sub-title"> My Technical skills</h1>
             <div class="tech-list">
@@ -182,7 +186,7 @@
 
         </div>
         <div class="copyright">
-            <p>Copyright © Shahnawazfolio.com | All rights reserved</p>
+            <p>Copyright © Shahnawazportfolio.com | All rights reserved</p>
         </div>
     </div>
 
@@ -204,34 +208,34 @@
         }
     </script>
     <script>
-        var sidemenu =document.getElementById("sidemenu");
-        function openmenu(){
-            sidemenu.style.right ="0";
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
 
         }
-        function closemenu(){
-            sidemenu.style.right ="-200px";
-            
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+
         }
     </script>
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyJEc31sppJsK3EAd5rL8RqbwFVGB81HRgpa8PsJMwoiAPrCwTsTZgSXD5ok0Hkdo628A/exec'
         const form = document.forms['submit-to-google-sheet']
-        const msg =document.getElementById("msg")
-      
+        const msg = document.getElementById("msg")
+
         form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                },5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
         })
-      </script>
+    </script>
 </body>
 
 </html>
